@@ -5,9 +5,8 @@ Project originally from <a href="https://medium.com/p/99ddeebb8c3a/responses/sho
 extended with a 'scroll-to-bottom' button ( <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView">scrollIntoView()</a>-method ). 
 Check browser compatibility if it meets your needs.
 
-# 
 # Version
-Angular CLI: 8.3.24\n
+Angular CLI: 8.3.24
 Node: 10.16.3\n
 OS: win32 x64
 Angular: 8.2.14
