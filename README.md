@@ -7,11 +7,10 @@ Check browser compatibility if it meets your needs.
 
 # Version
 > Angular CLI: 8.3.24
-> Node: 10.16.3\n
+> Node: 10.16.3
 > Angular: 8.2.14
 
 # Package                         Version
------------------------------------------------------------
 @angular-devkit/architect         0.803.24
 @angular-devkit/build-angular     0.803.24
 @angular-devkit/build-optimizer   0.803.24
