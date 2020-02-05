@@ -27,4 +27,4 @@ webpack                           4.39.2
 
 
 # Stackblitz
-<a href="https://stackblitz.com/github/kwhjvdkamp/scroll-to-top-and-scroll-to-bttom">View</a>
+<a href="https://stackblitz.com/github/kwhjvdkamp/ScrollToTopAndScrollToBottom">View</a>
