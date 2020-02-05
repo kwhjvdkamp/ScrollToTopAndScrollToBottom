@@ -6,15 +6,11 @@ extended with a 'scroll-to-bottom' button ( <a href="https://developer.mozilla.o
 Check browser compatibility if it meets your needs.
 
 # Version
-Angular CLI: 8.3.24
-Node: 10.16.3\n
-OS: win32 x64
-Angular: 8.2.14
-... common, compiler, compiler-cli, core, forms
-... language-service, platform-browser, platform-browser-dynamic
-... router
+> Angular CLI: 8.3.24
+> Node: 10.16.3\n
+> Angular: 8.2.14
 
-Package                           Version
+# Package                         Version
 -----------------------------------------------------------
 @angular-devkit/architect         0.803.24
 @angular-devkit/build-angular     0.803.24
