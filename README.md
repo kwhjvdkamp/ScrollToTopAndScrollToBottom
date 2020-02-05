@@ -1,6 +1,7 @@
-# scroll-to-top-and-scroll-to-bttom
+# Scroll to top and scroll to bottom
  Button to scroll automatically back to top or automatically further down to the bottom of the page
 
+# Version
 Angular CLI: 8.3.24
 Node: 10.16.3
 OS: win32 x64
