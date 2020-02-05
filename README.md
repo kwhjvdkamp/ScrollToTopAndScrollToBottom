@@ -7,8 +7,8 @@ Check browser compatibility if it meets your needs.
 
 # 
 # Version
-Angular CLI: 8.3.24
-Node: 10.16.3
+Angular CLI: 8.3.24\n
+Node: 10.16.3\n
 OS: win32 x64
 Angular: 8.2.14
 ... common, compiler, compiler-cli, core, forms
