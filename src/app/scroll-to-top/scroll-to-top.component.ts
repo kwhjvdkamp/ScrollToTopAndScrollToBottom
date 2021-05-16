@@ -32,7 +32,7 @@ export class ScrollTopComponent implements OnInit {
     }
 
     /**
- * @param $event object passed from Html */
+     * @param $event object passed from Html */
     @HostListener('window:scroll', ['$event']) onWindowScroll($event: any) {
         // console.log(`Scrolling! @HostListener(...) ${$event}`);
 
