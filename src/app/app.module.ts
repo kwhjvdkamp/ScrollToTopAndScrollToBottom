@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MaterialModule } from './material.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ScrollTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { ScrollBottomComponent } from './scroll-to-bottom/scroll-to-bottom.component';
-
 
 @NgModule({
   /**
@@ -14,7 +16,10 @@ import { ScrollBottomComponent } from './scroll-to-bottom/scroll-to-bottom.compo
    */
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+
+    MaterialModule
   ],
   /**
    * declarations: list of 'components' >> NOT 'modules' or 'services'
@@ -32,7 +37,7 @@ import { ScrollBottomComponent } from './scroll-to-bottom/scroll-to-bottom.compo
   ],
 
   /** bootstrap (as verb): metaphor for implementing the 'AppComponent'
-   *  to render the 'app' successfull
+   *  to render the 'app' successful
    * */
   bootstrap: [
     AppComponent
