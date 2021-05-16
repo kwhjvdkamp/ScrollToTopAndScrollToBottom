@@ -7,7 +7,7 @@ import { MaterialModule } from './material.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { ScrollTopComponent } from './scroll-to-top/scroll-to-top.component';
+// import { ScrollTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { ScrollBottomComponent } from './scroll-to-bottom/scroll-to-bottom.component';
 
 @NgModule({
@@ -27,7 +27,7 @@ import { ScrollBottomComponent } from './scroll-to-bottom/scroll-to-bottom.compo
   declarations: [
     AppComponent,
     HomeComponent,
-    ScrollTopComponent,
+    // ScrollTopComponent,
     ScrollBottomComponent
   ],
   /**
