@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject, HostListener } from '@angular/core';
-import { DOCUMENT } from "@angular/common";
+// import { DOCUMENT } from "@angular/common";
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -73,7 +73,7 @@ export class ScrollBottomComponent implements OnInit {
      * passed on properties onto that element via method 'scrollIntoView'
      * https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView */
     public scrollToBottom() {
-        // console.log(`scrollToBottom() | window.pageYOffset (this.windowScrolled): ${(Math.round(window.pageYOffset * 10 ^ 2) / 10 ^ 2)}-(${this.windowScrolled})---![CLICKED-DOWN]!`);
+        // console.log(`scrollToBottom() | window.pageYOffset (this.windowScrolled): ${(Math.ceil(window.pageYOffset))}-(${this.windowScrolled})---![CLICKED-DOWN]!`);
         let element = document.getElementById("lowest-diversion");
         element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
     }
