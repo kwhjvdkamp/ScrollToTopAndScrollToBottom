@@ -1,10 +1,8 @@
 import { Component, OnInit, Inject, HostListener } from '@angular/core';
-// import { DOCUMENT } from "@angular/common";
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 
 import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
-// import { faFontAwesomeFlag } from '@fortawesome/free-brands-svg-icons';
 import { icon } from '@fortawesome/fontawesome-svg-core';
 
 @Component({
@@ -14,14 +12,11 @@ import { icon } from '@fortawesome/fontawesome-svg-core';
 })
 export class ScrollBottomComponent implements OnInit {
 
-    public windowScrolled: boolean;
+    public windowScrolledToBottom: boolean;
 
-    // faFontAwesomeFlag = faFontAwesomeFlag;
     faAngleDoubleDown = faAngleDoubleDown;
 
     constructor(
-        // @Inject(DOCUMENT) private document: Document,
-
         registry: MatIconRegistry,
         sanitizer: DomSanitizer
     ) {
@@ -42,26 +37,29 @@ export class ScrollBottomComponent implements OnInit {
         // console.log(`Scrolling! @HostListener(...) ${$event}`);
 
         // ? sets the visibility of the 'scroll button' to show the button to smoothly 'fly' to bottom
-        this.windowScrolled = true;
+        this.windowScrolledToBottom = true;
 
         const documentElementByIdOffSetHeight: number = document.getElementById('main').offsetHeight;
         const windowInnerHeight: number = window.innerHeight;
         const windowPageYOffset: number = Math.ceil(window.pageYOffset);
+        const divider: string = '-----';
         // console.log(`document.body.offsetHeight: ${documentElementByIdOffSetHeight}`);
         // console.log(`window.innerHeight: ${windowInnerHeight}`);
         // console.log(`Math.ceil(window.pageYOffset): ${windowPageYOffset}`);
         // console.log(`window.innerHeight + Math.ceil(window.pageYOffset): ${windowInnerHeight + windowPageYOffset}`);
+        // console.log(`${divider}`);
 
         if (documentElementByIdOffSetHeight <= (windowInnerHeight + windowPageYOffset)) {
-            // console.log(`Arrived the bottom!\r\n`
-            //     + `document.body.offsetHeight: ${documentElementByIdOffSetHeight}\r\n`
-            //     + `(window.innerHeight: ${windowInnerHeight} + Math.ceil(window.pageYOffset): ${windowPageYOffset}) = ${windowInnerHeight + windowPageYOffset}`);
-            this.windowScrolled = false;
+            console.log(`Arrived at the bottom!\r\n`
+                + `${divider}\r\n`
+                + `document.body.offsetHeight: ${documentElementByIdOffSetHeight}\r\n`
+                + `(window.innerHeight: ${windowInnerHeight} + Math.ceil(window.pageYOffset): ${windowPageYOffset}) = ${windowInnerHeight + windowPageYOffset}`);
+            this.windowScrolledToBottom = false;
         }
     }
 
     ngOnInit(): void {
-        this.windowScrolled = true;
+        this.windowScrolledToBottom = true;
 
         // ? Want to know something about the current document?
         // console.log(`ngOnInit() ${this.document.baseURI}`);
@@ -73,7 +71,7 @@ export class ScrollBottomComponent implements OnInit {
      * passed on properties onto that element via method 'scrollIntoView'
      * https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView */
     public scrollToBottom() {
-        // console.log(`scrollToBottom() | window.pageYOffset (this.windowScrolled): ${(Math.ceil(window.pageYOffset))}-(${this.windowScrolled})---![CLICKED-DOWN]!`);
+        // console.log(`scrollToBottom() | window.pageYOffset (this.windowScrolledToBottom): ${(Math.ceil(window.pageYOffset))}-(${this.windowScrolledToBottom})---![CLICKED-DOWN]!`);
         let element = document.getElementById("lowest-diversion");
         element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
     }
