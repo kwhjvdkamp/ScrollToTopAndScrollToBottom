@@ -33,7 +33,9 @@ export class ScrollTopComponent implements OnInit {
 
     /**
      * @param $event object passed from Html */
-    @HostListener('window:scroll', ['$event']) onWindowScroll($event: any) {
+    @HostListener('window:scroll', ['$event']) onWindowScroll(
+    // $event: any
+    ): void {
         // console.log(`Scrolling! @HostListener(...) ${$event}`);
 
         // ? sets the visibility of the 'scroll button' to show the button to smoothly 'fly' to bottom
@@ -59,7 +61,7 @@ export class ScrollTopComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.windowScrolledToTop = true;
+        this.windowScrolledToTop = false;
 
         // ? Want to know something about the current document?
         // console.log(`ngOnInit() ${this.document.baseURI}`);
@@ -70,10 +72,11 @@ export class ScrollTopComponent implements OnInit {
      * Looks for element with the Id 'highest diversion' and
      * passed on properties onto that element via method 'scrollIntoView'
      * https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView */
-    public scrollToTop() {
-        // console.log(`scrollToBottom() | window.pageYOffset (this.windowScrolledToTop): ${(Math.ceil(window.pageYOffset))}-(${this.windowScrolledToTop})---![CLICKED-DOWN]!`);
-        let element = document.getElementById("highest-diversion");
-        element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+    public scrollToTop(): void {
+        // console.log(`scrollToBottom() | window.pageYOffset (this.windowScrolledToTop): ${(Math.ceil(window.pageYOffset))}`
+        // + `(${this.windowScrolledToTop})---![CLICKED-DOWN]!`);
+        const element = document.getElementById('highest-diversion');
+        element.scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});
     }
 
 }

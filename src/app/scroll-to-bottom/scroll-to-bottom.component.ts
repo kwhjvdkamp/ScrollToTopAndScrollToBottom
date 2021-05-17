@@ -71,9 +71,10 @@ export class ScrollBottomComponent implements OnInit {
      * passed on properties onto that element via method 'scrollIntoView'
      * https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView */
     public scrollToBottom() {
-        // console.log(`scrollToBottom() | window.pageYOffset (this.windowScrolledToBottom): ${(Math.ceil(window.pageYOffset))}-(${this.windowScrolledToBottom})---![CLICKED-DOWN]!`);
-        let element = document.getElementById("lowest-diversion");
-        element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+        // console.log(`scrollToBottom() | window.pageYOffset (this.windowScrolledToBottom): ${(Math.ceil(window.pageYOffset))}`
+        // + `(${this.windowScrolledToBottom})---![CLICKED-DOWN]!`);
+        const element = document.getElementById('lowest-diversion');
+        element.scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});
     }
 
 }
