@@ -42,7 +42,7 @@ export class ScrollBottomComponent implements OnInit {
         const documentElementByIdOffSetHeight: number = document.getElementById('main').offsetHeight;
         const windowInnerHeight: number = window.innerHeight;
         const windowPageYOffset: number = Math.ceil(window.pageYOffset);
-        const divider: string = '-----';
+        // const divider: string = '-----';
         // console.log(`document.body.offsetHeight: ${documentElementByIdOffSetHeight}`);
         // console.log(`window.innerHeight: ${windowInnerHeight}`);
         // console.log(`Math.ceil(window.pageYOffset): ${windowPageYOffset}`);
@@ -50,9 +50,9 @@ export class ScrollBottomComponent implements OnInit {
         // console.log(`${divider}`)
 
         if (documentElementByIdOffSetHeight <= (windowInnerHeight + windowPageYOffset)) {
-            // console.log(`Arrived the bottom!\r\n`
-            //     + `document.body.offsetHeight: ${documentElementByIdOffSetHeight}\r\n`
-            //     + `(window.innerHeight: ${windowInnerHeight} + Math.ceil(window.pageYOffset): ${windowPageYOffset}) = ${windowInnerHeight + windowPageYOffset}`);
+            alert(`Arrived at the bottom!\r\n`
+                + `document.body.offsetHeight: ${documentElementByIdOffSetHeight}\r\n`
+                + `(window.innerHeight: ${windowInnerHeight} + Math.ceil(window.pageYOffset): ${windowPageYOffset}) = ${windowInnerHeight + windowPageYOffset}`);
             this.windowScrolledToBottom = false;
         }
     }
