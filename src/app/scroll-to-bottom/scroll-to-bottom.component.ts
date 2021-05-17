@@ -42,15 +42,16 @@ export class ScrollBottomComponent implements OnInit {
         const documentElementByIdOffSetHeight: number = document.getElementById('main').offsetHeight;
         const windowInnerHeight: number = window.innerHeight;
         const windowPageYOffset: number = Math.ceil(window.pageYOffset);
-        // const divider: string = '-----';
+        const divider: string = '-----';
         // console.log(`document.body.offsetHeight: ${documentElementByIdOffSetHeight}`);
         // console.log(`window.innerHeight: ${windowInnerHeight}`);
         // console.log(`Math.ceil(window.pageYOffset): ${windowPageYOffset}`);
         // console.log(`window.innerHeight + Math.ceil(window.pageYOffset): ${windowInnerHeight + windowPageYOffset}`);
-        // console.log(`${divider}`)
+        // console.log(`${divider}`);
 
         if (documentElementByIdOffSetHeight <= (windowInnerHeight + windowPageYOffset)) {
-            alert(`Arrived at the bottom!\r\n`
+            console.log(`Arrived at the bottom!\r\n`
+                + `${divider}\r\n`
                 + `document.body.offsetHeight: ${documentElementByIdOffSetHeight}\r\n`
                 + `(window.innerHeight: ${windowInnerHeight} + Math.ceil(window.pageYOffset): ${windowPageYOffset}) = ${windowInnerHeight + windowPageYOffset}`);
             this.windowScrolledToBottom = false;
