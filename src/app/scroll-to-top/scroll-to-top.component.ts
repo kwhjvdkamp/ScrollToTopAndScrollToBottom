@@ -49,7 +49,7 @@ export class ScrollTopComponent implements OnInit {
         // console.log(`window.innerHeight + Math.ceil(window.pageYOffset): ${windowInnerHeight + windowPageYOffset}`);
         // console.log(`${divider}`);
 
-        if (windowPageYOffset < 20) {
+        if (windowPageYOffset < 1) {
             console.log(`Arrived at the TOP!\r\n`
                 + `${divider}\r\n`
                 + `document.body.offsetHeight: ${documentElementByIdOffSetHeight}\r\n`
