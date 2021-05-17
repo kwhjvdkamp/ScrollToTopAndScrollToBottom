@@ -12,36 +12,37 @@ import { ScrollBottomComponent } from './scroll-to-bottom/scroll-to-bottom.compo
 import { ScrollTopComponent } from './scroll-to-top/scroll-to-top.component';
 
 @NgModule({
-  /**
-   * imports: list of 'modules' >> NOT 'components' or 'services'
-   */
-  imports: [
-    BrowserModule,
-    FormsModule,
-    BrowserAnimationsModule,
+    /**
+     * imports: list of 'modules' >> NOT 'components' or 'services'
+     */
+    imports: [
+        BrowserModule,
+        FormsModule,
+        BrowserAnimationsModule,
 
-    MaterialModule
-  ],
-  /**
-   * declarations: list of 'components' >> NOT 'modules' or 'services'
-   */
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    ScrollBottomComponent,
-    ScrollTopComponent
-  ],
-  /**
-   * providers: list of 'services' >> NOT 'components' or 'modules'
-   * */
-  providers: [
-  ],
+        MaterialModule
+    ],
+    /**
+     * declarations: list of 'components' >> NOT 'modules' or 'services'
+     */
+    declarations: [
+        AppComponent,
+        HomeComponent,
 
-  /** bootstrap (as verb): metaphor for implementing the 'AppComponent'
-   *  to render the 'app' successful
-   * */
-  bootstrap: [
-    AppComponent
-  ]
+        ScrollBottomComponent,
+        ScrollTopComponent
+    ],
+    /**
+     * providers: list of 'services' >> NOT 'components' or 'modules'
+     * */
+    providers: [
+    ],
+
+    /** bootstrap (as verb): metaphor for implementing the 'AppComponent'
+     *  to render the 'app' successful
+     * */
+    bootstrap: [
+        AppComponent
+    ]
 })
 export class AppModule { }
