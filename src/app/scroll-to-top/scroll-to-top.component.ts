@@ -20,9 +20,6 @@ export class ScrollTopComponent implements OnInit {
         registry: MatIconRegistry,
         sanitizer: DomSanitizer
     ) {
-        // ? Want to know something about the current document
-        // console.log(`constructor ${this.document.URL}`);
-
         // ?
         const svg = icon(faAngleDoubleUp).html.join('');
         registry.addSvgIconLiteral(
@@ -33,15 +30,14 @@ export class ScrollTopComponent implements OnInit {
 
     /**
      * @param $event object passed from Html */
-    @HostListener('window:scroll', ['$event']) onWindowScroll(
-    // $event: any
-    ): void {
+    @HostListener('window:scroll', ['$event']) onWindowScroll($event: any) {
         // console.log(`Scrolling! @HostListener(...) ${$event}`);
 
         // ? sets the visibility of the 'scroll button' to show the button to smoothly 'fly' to bottom
         this.windowScrolledToTop = true;
 
-        const documentElementByIdOffSetHeight: number = document.getElementById('main').offsetHeight;
+        // https://stackoverflow.com/questions/43218680/document-getelementbyidid-may-be-null : use of '!'
+        const documentElementByIdOffSetHeight: number = document.getElementById('main-diversion')!.offsetHeight;
         const windowInnerHeight: number = window.innerHeight;
         const windowPageYOffset: number = Math.ceil(window.pageYOffset);
         const divider: string = '-----';
@@ -52,19 +48,17 @@ export class ScrollTopComponent implements OnInit {
         // console.log(`${divider}`);
 
         if (windowPageYOffset < 1) {
-            console.log(`Arrived at the TOP!\r\n`
+            console.log(`Arrived at the TOP !\r\n`
                 + `${divider}\r\n`
                 + `document.body.offsetHeight: ${documentElementByIdOffSetHeight}\r\n`
                 + `(window.innerHeight: ${windowInnerHeight} + Math.ceil(window.pageYOffset): ${windowPageYOffset}) = ${windowInnerHeight + windowPageYOffset}`);
             this.windowScrolledToTop = false;
         }
+
     }
 
     ngOnInit(): void {
         this.windowScrolledToTop = false;
-
-        // ? Want to know something about the current document?
-        // console.log(`ngOnInit() ${this.document.baseURI}`);
     }
 
     /**
@@ -75,8 +69,8 @@ export class ScrollTopComponent implements OnInit {
     public scrollToTop(): void {
         // console.log(`scrollToBottom() | window.pageYOffset (this.windowScrolledToTop): ${(Math.ceil(window.pageYOffset))}`
         // + `(${this.windowScrolledToTop})---![CLICKED-DOWN]!`);
-        const element = document.getElementById('highest-diversion');
-        element.scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});
+        const element = document.getElementById('highest-diversion')!;
+        element.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
     }
 
 }

@@ -20,9 +20,6 @@ export class ScrollBottomComponent implements OnInit {
         registry: MatIconRegistry,
         sanitizer: DomSanitizer
     ) {
-        // ? Want to know something about the current document
-        // console.log(`constructor ${this.document.URL}`);
-
         // ?
         const svg = icon(faAngleDoubleDown).html.join('');
         registry.addSvgIconLiteral(
@@ -39,7 +36,8 @@ export class ScrollBottomComponent implements OnInit {
         // ? sets the visibility of the 'scroll button' to show the button to smoothly 'fly' to bottom
         this.windowScrolledToBottom = true;
 
-        const documentElementByIdOffSetHeight: number = document.getElementById('main').offsetHeight;
+        // https://stackoverflow.com/questions/43218680/document-getelementbyidid-may-be-null : use of '!'
+        const documentElementByIdOffSetHeight: number = document.getElementById('main-diversion')!.offsetHeight;
         const windowInnerHeight: number = window.innerHeight;
         const windowPageYOffset: number = Math.ceil(window.pageYOffset);
         const divider: string = '-----';
@@ -50,19 +48,17 @@ export class ScrollBottomComponent implements OnInit {
         // console.log(`${divider}`);
 
         if (documentElementByIdOffSetHeight <= (windowInnerHeight + windowPageYOffset)) {
-            console.log(`Arrived at the bottom!\r\n`
+            console.log(`Arrived at the BOTTOM !\r\n`
                 + `${divider}\r\n`
                 + `document.body.offsetHeight: ${documentElementByIdOffSetHeight}\r\n`
                 + `(window.innerHeight: ${windowInnerHeight} + Math.ceil(window.pageYOffset): ${windowPageYOffset}) = ${windowInnerHeight + windowPageYOffset}`);
             this.windowScrolledToBottom = false;
         }
+
     }
 
     ngOnInit(): void {
         this.windowScrolledToBottom = true;
-
-        // ? Want to know something about the current document?
-        // console.log(`ngOnInit() ${this.document.baseURI}`);
     }
 
     /**
@@ -73,7 +69,8 @@ export class ScrollBottomComponent implements OnInit {
     public scrollToBottom() {
         // console.log(`scrollToBottom() | window.pageYOffset (this.windowScrolledToBottom): ${(Math.ceil(window.pageYOffset))}`
         // + `(${this.windowScrolledToBottom})---![CLICKED-DOWN]!`);
-        const element = document.getElementById('lowest-diversion');
+
+        const element = document.getElementById('lowest-diversion')!;
         element.scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});
     }
 
