@@ -63,8 +63,8 @@ export class ScrollTopComponent implements OnInit {
 
     /**
      * Called from Html
-     * Looks for element with the Id 'highest diversion' and
-     * passed on properties onto that element via method 'scrollIntoView'
+     * Looks for element with the Id 'highest-diversion'
+     * Passed properties onto that element via method 'scrollIntoView'
      * https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView */
     public scrollToTop(): void {
         // console.log(`scrollToBottom() | window.pageYOffset (this.windowScrolledToTop): ${(Math.ceil(window.pageYOffset))}`

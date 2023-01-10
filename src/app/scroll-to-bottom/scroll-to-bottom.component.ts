@@ -63,8 +63,8 @@ export class ScrollBottomComponent implements OnInit {
 
     /**
      * Called from Html
-     * Looks for element with the Id 'lowest diversion' and
-     * passed on properties onto that element via method 'scrollIntoView'
+     * Looks for element with the Id 'lowest-diversion'
+     * Passed properties onto that element via method 'scrollIntoView'
      * https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView */
     public scrollToBottom() {
         // console.log(`scrollToBottom() | window.pageYOffset (this.windowScrolledToBottom): ${(Math.ceil(window.pageYOffset))}`
