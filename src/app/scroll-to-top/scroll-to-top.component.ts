@@ -28,37 +28,37 @@ export class ScrollTopComponent implements OnInit {
         );
     }
 
-    /**
-     * @param $event object passed from Html */
-    @HostListener('window:scroll', ['$event']) onWindowScroll($event: any) {
-        // console.log(`Scrolling! @HostListener(...) ${$event}`);
+    // /**
+    //  * @param $event object passed from Html */
+    // @HostListener('window:scroll', ['$event']) onWindowScroll($event: any) {
+    //     // console.log(`Scrolling! @HostListener(...) ${$event}`);
 
-        // ? sets the visibility of the 'scroll button' to show the button to smoothly 'fly' to bottom
-        this.windowScrolledToTop = true;
+    //     // ? sets the visibility of the 'scroll button' to show the button to smoothly 'fly' to bottom
+    //     this.windowScrolledToTop = true;
 
-        // https://stackoverflow.com/questions/43218680/document-getelementbyidid-may-be-null : use of '!'
-        const documentElementByIdOffSetHeight: number = document.getElementById('main-diversion')!.offsetHeight;
-        const windowInnerHeight: number = window.innerHeight;
-        const windowPageYOffset: number = Math.ceil(window.pageYOffset);
-        const divider: string = '-----';
-        // console.log(`document.body.offsetHeight: ${documentElementByIdOffSetHeight}`);
-        // console.log(`window.innerHeight: ${windowInnerHeight}`);
-        // console.log(`Math.ceil(window.pageYOffset): ${windowPageYOffset}`);
-        // console.log(`window.innerHeight + Math.ceil(window.pageYOffset): ${windowInnerHeight + windowPageYOffset}`);
-        // console.log(`${divider}`);
+    //     // https://stackoverflow.com/questions/43218680/document-getelementbyidid-may-be-null : use of '!'
+    //     const documentElementByIdOffSetHeight: number = document.getElementById('main-diversion')!.offsetHeight;
+    //     const windowInnerHeight: number = window.innerHeight;
+    //     const windowPageYOffset: number = Math.ceil(window.pageYOffset);
+    //     const divider: string = '-----';
+    //     // console.log(`document.body.offsetHeight: ${documentElementByIdOffSetHeight}`);
+    //     // console.log(`window.innerHeight: ${windowInnerHeight}`);
+    //     // console.log(`Math.ceil(window.pageYOffset): ${windowPageYOffset}`);
+    //     // console.log(`window.innerHeight + Math.ceil(window.pageYOffset): ${windowInnerHeight + windowPageYOffset}`);
+    //     // console.log(`${divider}`);
 
-        if (windowPageYOffset < 1) {
-            console.log(`Arrived at the TOP !\r\n`
-                + `${divider}\r\n`
-                + `document.body.offsetHeight: ${documentElementByIdOffSetHeight}\r\n`
-                + `(window.innerHeight: ${windowInnerHeight} + Math.ceil(window.pageYOffset): ${windowPageYOffset}) = ${windowInnerHeight + windowPageYOffset}`);
-            this.windowScrolledToTop = false;
-        }
+    //     if (windowPageYOffset < 1) {
+    //         console.log(`Arrived at the TOP !\r\n`
+    //             + `${divider}\r\n`
+    //             + `document.body.offsetHeight: ${documentElementByIdOffSetHeight}\r\n`
+    //             + `(window.innerHeight: ${windowInnerHeight} + Math.ceil(window.pageYOffset): ${windowPageYOffset}) = ${windowInnerHeight + windowPageYOffset}`);
+    //         this.windowScrolledToTop = false;
+    //     }
 
-    }
+    // }
 
     ngOnInit(): void {
-        this.windowScrolledToTop = false;
+        this.windowScrolledToTop = true;
     }
 
     /**
