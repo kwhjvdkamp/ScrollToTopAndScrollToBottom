@@ -37,7 +37,7 @@ export class ScrollBottomComponent implements OnInit {
     //     this.windowScrolledToBottom = true;
 
     //     // https://stackoverflow.com/questions/43218680/document-getelementbyidid-may-be-null : use of '!'
-    //     const documentElementByIdOffSetHeight: number = document.getElementById('main-diversion')!.offsetHeight;
+    //     const documentElementByIdOffSetHeight: number = document.getElementById('main')!.offsetHeight;
     //     const windowInnerHeight: number = window.innerHeight;
     //     const windowPageYOffset: number = Math.ceil(window.pageYOffset);
     //     const divider: string = '-----';
