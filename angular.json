@@ -95,7 +95,6 @@
       }
     }
   },
-  "defaultProject": "scroll-to-top-and-scroll-to-bottom",
   "cli": {
     "analytics": false
   }
