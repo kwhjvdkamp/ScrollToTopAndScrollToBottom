@@ -28,5 +28,5 @@ rxjs                            7.8.0
 typescript                      4.8.4
 
 
-# Stackblitz (under construction)
+# Stackblitz
 https://stackblitz.com/github/kwhjvdkamp/ScrollToTopAndScrollToBottom
