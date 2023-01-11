@@ -1,8 +1,8 @@
 # Scroll to top and scroll to bottom
- Buttons to scroll automatically back to top and down to the bottom of the page
+Buttons to scroll automatically back to top and down to the bottom of the page
  
-Goal 
- Working as aspected @keyframes: color and blinking
+# Working @keyframes
+Working as aspected: color and blinking 
  
 ## Versions & packages
 > Angular CLI: 14.2.10
