@@ -1,12 +1,5 @@
 # Scroll to top and scroll to bottom
  Button to scroll automatically back to top or automatically further down to the bottom of the page
- 
-     _                      _                 ____ _     ___
-    / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
-   / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
-  / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
- /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
-                |___/
 
 Angular CLI: 14.2.10
 Node: 18.12.1 (Unsupported)
