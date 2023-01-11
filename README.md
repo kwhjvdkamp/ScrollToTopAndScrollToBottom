@@ -29,4 +29,4 @@ typescript                      4.8.4
 
 
 # Stackblitz (under construction)
-https://stackblitz.com/github/kwhjvdkamp/ScrollToTopAndScrollToBottom/development
+https://stackblitz.com/github/kwhjvdkamp/ScrollToTopAndScrollToBottom
