@@ -1,11 +1,7 @@
 <!--Scroll to bottom-->
-<div class="scroll-to-bottom blink"
+<div class="scroll-to-bottom"
     [ngClass]="{'show-scrollBottom': windowScrolledToBottom}">
-    <button mat-button type="button" (click)="scrollToBottom()">
+    <button mat-button class="blink" type="button" (click)="scrollToBottom()">
         <mat-icon svgIcon="angle-double-down" style="vertical-align: top"></mat-icon>
     </button>
-
-    <!-- <button mat-button type="button" (click)="scrollToBottom()">
-        <fa-icon [icon]="faAngleDoubleDown" style="padding-right: 6px"></fa-icon>
-    </button> -->
 </div>
