@@ -1,15 +1,15 @@
 # Scroll to top and scroll to bottom
- Buttons to scroll automatically back to top and down to the bottom of the page.
+ Buttons to scroll automatically back to top and down to the bottom of the page
  
- ## Goal 
+Goal 
  Working as aspected @keyframes: color and blinking
-
-Angular CLI: 14.2.10
-Node: 18.12.1 (Unsupported)
-Package Manager: npm 9.1.3
-OS: win32 x64
-
-Angular: 14.2.12
+ 
+## Versions & packages
+> Angular CLI: 14.2.10
+> Node: 18.12.1 (Unsupported)
+> Package Manager: npm 9.1.3
+> OS: win32 x64
+> Angular: 14.2.12
 ... animations, common, compiler, compiler-cli, core, forms
 ... language-service, platform-browser, platform-browser-dynamic
 ... router
